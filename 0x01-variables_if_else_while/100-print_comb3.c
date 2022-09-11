@@ -1,31 +1,30 @@
 #include <stdio.h>
 #include <unistd.h>
-
 /**
- * main - Entry Point
- * Description: print 2 different combinations
- * Return: Always 0 (Success)
+ * main - Entyr point
+ * Description: prints two digits combination
+ * Return: Always 0 (success)
  */
 int main(void)
 {
 	int a, b;
 
-	for (a = 0 ; a < 10; a++)
+	for (a = '0'; a <= '9'; a++)
 	{
-			for (b = 0; b < 10; b++)
+		for (b = '0'; b <= '9'; b++)
+		{
+			if (a < b)
 			{
-				if (a < b)
-				{
-					putchar(a + '0');
-					putchar(b + '0');
+				putchar(a);
+				putchar(b);
 
-					if (a != 8 || (a == 8 && b != 9))
-					{
-						putchar(',');
-						putchar(' ');
-					}
+				if (!(a == '8' && b == '9'))
+				{
+					putchar(',');
+					putchar(' ');
 				}
 			}
+		}
 	}
 	putchar('\n');
 	return (0);
