@@ -3,23 +3,25 @@
 
 /**
  * main - Entry Point
- * Description: print 2 different combinations
+ * Description: Print differnt combination of 3 digits, no repeat.
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int a, b;
+	int a, b, c;
 
-	for (a = 0 ; a < 10; a++)
+	for (a = 0; a < 10; a++)
 	{
-			for (b = 0; b < 10; b++)
+		for (b = 0; b < 10; b++)
+			for (c = 0; c < 10; c++)
 			{
-				if (a < b)
+				if (a < b && b < c)
 				{
 					putchar(a + '0');
 					putchar(b + '0');
+					putchar(c + '0');
 
-					if (a != 8 || (a == 8 && b != 9))
+					if (!(a == 7 && b == 8 && c == 9))
 					{
 						putchar(',');
 						putchar(' ');
