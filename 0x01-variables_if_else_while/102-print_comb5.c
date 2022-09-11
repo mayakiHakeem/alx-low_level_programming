@@ -15,7 +15,7 @@ int main(void)
 		{
 			for (k = '0'; k <= '9'; k++)
 			{
-				for (l = '1'; l <= '9'; l++)
+				for (l = '0'; l <= '9'; l++)
 				{
 					if (((k + l) > (i + j) &&  k >= i) || i < k)
 					{
@@ -24,8 +24,11 @@ int main(void)
 						putchar(32);
 						putchar(k);
 						putchar(l);
-					if (!((i + j + k == 35) && (i == '9')))
+					if ((i == '9') && (j == '8') && (k == '9') && (l == '9'))
 					{
+					}
+					else
+					{	
 						putchar(',');
 						putchar(' ');
 					}
