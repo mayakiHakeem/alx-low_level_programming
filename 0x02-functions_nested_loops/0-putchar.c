@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - Entry Point
  * Description: printing "_putchar"
@@ -6,16 +6,16 @@
  */
 int main(void)
 {
-	int pr_str(void);
+	int i;
 
-	pr_str();
-}
-/**
- * function definition
- *
- * Return: Always 0 (Success)
- */
-int pr_str(void)
-{
-	printf("_putchar\n");
+	char ch[] = "_putchar\n";
+	i = 0;
+	while (ch[i] != '\0');
+	{
+		char c = ch[i];
+
+		_putchar(i);
+		i += 1;
+	}
+	return (0);
 }
