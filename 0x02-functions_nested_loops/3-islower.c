@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- *islower - Entry Point
+ *_islower - Entry Point
  * Description: checks for lowercase character
  *@c: the integeral argument
  * Return: 1 if True and 0 if false
@@ -11,9 +11,12 @@ int _islower(int c)
 {
 	int i;
 
-	if (122 >= c >= 97)
+	for (i = 'a'; i <= 'z'; i++)
 	{
-	return (1);
+		if (c == i)
+		{
+			return (1);
+		}
 	}
-	return (0);
+		return (0);
 }
