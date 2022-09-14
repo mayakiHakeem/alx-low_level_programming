@@ -1,8 +1,8 @@
 #include "main.h"
 #include <unistd.h>
 /**
- * print the alphabet in lower case to stdout
- * 
+ * print_alphabet - print the alphabet in lower case to stdout
+ *
  * Return: On success 1.
  */
 void print_alphabet(void)
@@ -16,5 +16,3 @@ void print_alphabet(void)
 		c++;
 	}
 	_putchar('\n');
-	return;
-}	
