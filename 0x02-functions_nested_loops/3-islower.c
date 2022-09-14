@@ -7,17 +7,13 @@
  *@c: the integeral argument
  * Return: 1 if True and 0 if false
  */
-int islower(int c)
+int _islower(int c)
 {
 	int i;
 
-	for (i = 'a'; i <= 'z'; i++)
+	if (122 >= c >= 97)
 	{
-
-		if (c == i)
-		{
-		return (1);
-		}
+	return (1);
 	}
 	return (0);
 }
