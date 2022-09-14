@@ -10,8 +10,8 @@ int _isalpha(int c)
 {
 	int i;
 
-	i = 'a';
-	while (( 90 >= i >= 65) || (122 >= i >= 97))
+	i = 'A';
+	while ((i >= 'A' && i <= 'Z') || (i >= 'a' && i <= 'z'))
 	{
 		if (c == i)
 		{
@@ -19,5 +19,5 @@ int _isalpha(int c)
 		}
 		i++;
 	}
-	return (0);	
+	return (0);
 }
