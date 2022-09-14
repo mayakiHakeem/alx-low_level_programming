@@ -6,9 +6,9 @@
  * Description: print absolute of number
  * @int: type of formal parameter
  * @n: formal parameter
- * Return: Always 0 Success
+ * Return: integer
  */
-int _abs(int);
+int _abs(int n);
 {
 	if (n < 0)
 	{
