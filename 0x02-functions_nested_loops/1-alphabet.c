@@ -3,7 +3,7 @@
 /**
  * print_alphabet - print the alphabet in lower case to stdout
  *
- * Return: On success 1.
+ * Return: On success (1)
  */
 void print_alphabet(void)
 {
@@ -16,3 +16,4 @@ void print_alphabet(void)
 		c++;
 	}
 	_putchar('\n');
+}
