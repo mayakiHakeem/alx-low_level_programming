@@ -5,17 +5,18 @@
  * _abs - entry point
  * Description: print absolute of number
  * @int: type of formal parameter
+ * @n: formal parameter
  * Return: Always 0 Success
  */
-int _abs(int n);
+int _abs(int);
 {
 	if (n < 0)
 	{
-		_putchar(-n);
+		return (-n);
 	}
 	else
 	{
-		_putchar(n);
+		return (n);
 	}
-	return (0);
+
 }
