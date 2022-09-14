@@ -11,9 +11,10 @@ int _isalpha(int c)
 	int i;
 
 	i = 'A';
-	while ((i >= 'A' && i <= 'Z') || (i >= 'a' && i <= 'z'))
+	j = 'a';
+	while ((i >= 'A' && i <= 'Z') || (j >= 'a' && j <= 'z'))
 	{
-		if (c == i)
+		if (c == i || c == i)
 		{
 			return (1);
 		}
