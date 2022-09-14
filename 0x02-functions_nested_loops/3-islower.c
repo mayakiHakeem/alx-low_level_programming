@@ -14,8 +14,9 @@ int islower(int c)
 		int c;
 
 		if (c == i)
-	{
+		{
 		return (1);
+		}
 	}
 	return (0);
 }
