@@ -13,7 +13,6 @@ int islower(int c)
 
 	for (i = 'a'; i <= 'z'; i++)
 	{
-		int c;
 
 		if (c == i)
 		{
