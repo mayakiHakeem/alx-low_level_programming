@@ -9,9 +9,11 @@
  */
 int islower(int c)
 {
-	int c;
+	for (i = 'a'; i <= 'z'; i++)
+	{
+		int c;
 
-	if (c >= 97 && c <= 122)
+		if (c == i)
 	{
 		return (1);
 	}
