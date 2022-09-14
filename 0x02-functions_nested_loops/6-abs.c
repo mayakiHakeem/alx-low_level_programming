@@ -7,19 +7,15 @@
  * @int: type of formal parameter
  * Return: Always 0 Success
  */
-int _abs(int);
+int _abs(int n);
 {
-	int x, y;
-
-	y = x * -1;
-
-	if (x < 0)
+	if (n < 0)
 	{
-		_putchar(y);
+		_putchar(-n);
 	}
 	else
 	{
-		_putchar(x);
+		_putchar(n);
 	}
 	return (0);
 }
