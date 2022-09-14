@@ -9,6 +9,8 @@
  */
 int islower(int c)
 {
+	int i;
+
 	for (i = 'a'; i <= 'z'; i++)
 	{
 		int c;
