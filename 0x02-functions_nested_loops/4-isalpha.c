@@ -8,17 +8,16 @@
  */
 int _isalpha(int c)
 {
-	int i;
-
-	i = 'A';
-	j = 'a';
-	while ((i >= 'A' && i <= 'Z') || (j >= 'a' && j <= 'z'))
+	if ( c <= 'Z' && c >= 'A')
 	{
-		if (c == i || c == j)
-		{
-			return (1);
-		}
-		i++;
+		return (1);
 	}
-	return (0);
+	else if ( c <= 'z' && c >= 'z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
