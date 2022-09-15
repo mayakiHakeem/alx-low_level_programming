@@ -1,15 +1,19 @@
-#include <unistd.h>
 #include "main.h"
 
 /**
- * _abs - entry point
- * Description: print absolute of number
- * @n: formal parameter
- * Return: integer
+ * _abs - Entry point
+ * @n: n is an integer
+ * Description: prints the absolute value of an integer
+ * Return: int
  */
+
 int _abs(int n)
 {
-	if (n < 0)
+	if (n > 0)
+	{
+		return (n);
+	}
+	else if (n < 0)
 	{
 		return (-n);
 	}
@@ -17,5 +21,4 @@ int _abs(int n)
 	{
 		return (n);
 	}
-
 }
