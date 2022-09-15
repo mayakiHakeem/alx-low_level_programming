@@ -4,7 +4,6 @@
 /**
  * _abs - entry point
  * Description: print absolute of number
- * @int: type of formal parameter
  * @n: formal parameter
  * Return: integer
  */
