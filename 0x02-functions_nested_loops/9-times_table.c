@@ -3,39 +3,34 @@
 
 /**
  * times_table - entry point
- * Description: print multiplication table
+ * description: print multiplication table
  * Return: void
  */
+
 void times_table(void)
 {
-	int row, column, product, tens, ones;
+	int num, mult, prod;
 
-	for (row = 0; row <= 9; row++)
+	for (num = 0; num <= 9; ++num)
 	{
-		for (column = 0; column <= 9; column++)
-		{
-			product = row * column;
-			tens = product / 10;
-			ones = product % 10;
+		_putchar(48);
 
-			if (column == 0)
-			{
-				_putchar('0');
-			}
-			else if (product < 10)
-			{
-				_putchar(',');
+		for (mult = 1; mult <= 9; ++mult)
+		{
+			_putchar(',');
+			_putchar(' ');
+			prod = num * mult;
+
+			/**
+			 * put space if product is a single number
+			 * place the first digit if its two numbers
+			 */
+			if (prod <= 9)
 				_putchar(' ');
-				_putchar(' ');
-				_putchar(ones + '0');
-			}
 			else
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(tens + '0');
-				_putchar(ones + '0');
-			}
+				_putchar((prod / 10) + 48); /*get the first digit*/
+			_putchar((prod % 10) + 48); /*get the second digit*/
 		}
-		_putchar('\n');
+			_putchar('\n');
+	}
 }
