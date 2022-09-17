@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <unistd.h>
 /**
  * _isdigit - check if argument is digit
  * @c: integral formal parameter of the function

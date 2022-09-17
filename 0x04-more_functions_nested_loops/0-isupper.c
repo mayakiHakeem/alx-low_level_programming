@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <unistd.h>
 /**
  * _isupper - check if an argument is uppercase
  * @c: integral formal parameter
