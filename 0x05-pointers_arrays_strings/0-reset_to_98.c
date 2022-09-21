@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * reset_to_98 - reset the argument to 98
- * @*n: pointer to integer
+ * reset_to_98 - update the value of n to 98
+ * @n: integral pointer to be updated 
  *
  * Return: void
  */
