@@ -9,7 +9,7 @@
 int main(void)
 {
 	int numb;
-	long unsigned int total_nature = 0;
+	unsigned long int total_nature = 0;
 
 	for (numb = 3; numb < 1024; numb++)
 		if ((numb % 3 == 0) || (numb % 5 == 0))
