@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * print_to_98 - write numbers to stdout
@@ -14,60 +14,21 @@ void print_to_98(int n)
 	{
 		for (n = n; n >= 98; n--)
 		{
-			if (n > 10)
-			{
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-			}
+			if ( n != 98)
+				printf("%d, ", n);
 			else
-				_putchar(n + '0');
-
-			if (n != 98)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+				printf("%d\n", n);
 		}
-		_putchar('\n');
 	}
-	else if (n < 98 && !(n < 0))
-	{
-		for (n = n; n < 98; n++)
-		{
-			if (n > 10)
-			{
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-			}
-			else
-				_putchar(n + '0');
 
-			if (n != 98)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
-		}
-		_putchar('\n');
-	}
-	else if (n < 0)
+	else
 	{
-		for (n = n; n >= 98; n++)
+		for (; n <= 98; n++)
 		{
-			if (-n > 10)
-			{
-				_putchar(-(n / 10) + '0');
-				_putchar(-(n % 10) + '0');
-			}
-			else
-				_putchar(-n + '0');
-
 			if (n != 98)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+				printf("%d, ", n);
+			else
+				printf("%d\n", n);
 		}
-		_putchar('\n');
 	}
 }
