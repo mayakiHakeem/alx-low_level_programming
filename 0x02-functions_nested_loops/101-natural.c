@@ -3,8 +3,8 @@
 /**
  * main - Entry point
  *
- *Description: print multiple of 3 & 5
- *Return 0 (success)
+ * Description: print multiple of 3 & 5
+ * Return: 0 (success)
  */
 int main(void)
 {
