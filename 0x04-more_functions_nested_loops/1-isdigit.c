@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _is_digit - check if number
+ * _isdigit - check if number
  * @c: param to be checked
  *
  * Decription: check if param is number
