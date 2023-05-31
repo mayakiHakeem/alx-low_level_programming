@@ -9,7 +9,7 @@
  */
 void rev_string(char *s)
 {
-	int i, sum = 0;
+	int sum = 0;
 	char *p1, *p2, store;
 
 	while (s[sum] != '\0')
