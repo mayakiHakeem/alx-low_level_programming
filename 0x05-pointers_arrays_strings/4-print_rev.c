@@ -14,7 +14,7 @@ void print_rev(char *s)
 	for (j = 0; s[j] != '\0'; j++)
 		sum++;
 
-	for (i = sum; i >= 0; i--)
+	for (i = sum - 1; i >= 0; i--)
 		_putchar(s[i]);
 	_putchar('\n');
 }
