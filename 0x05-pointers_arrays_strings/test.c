@@ -8,11 +8,11 @@
  */
 int main(void)
 {
-	char s1[98];
-	char *ptr;
+	int array[1] = {
+		98
+	};
 
-	ptr = _strcpy(s1, "First, solve the problem. Then, write the code\n");
-	printf("%s", s1);
-	printf("%s", ptr);
+	print_array(array, 0);
+	print_array(array, -1);
 	return (0);
 }
