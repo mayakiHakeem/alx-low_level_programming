@@ -10,7 +10,7 @@
 int _atoi(char *s)
 {
 	int digit, num = 0, sign = 1;
-
+	int vel = 0;
 	while (*s == ' ')
 		s++;
 
@@ -35,8 +35,9 @@ int _atoi(char *s)
 				return (sign == 1? INT_MAX : INT_MIN);
 
 			num = num * 10 + digit;
+			vel = 1;
 		}
-		else if (num != 0)
+		else if (vel && (*s != ' ' || *(s + 1) >= '0' || *(s + 1) <= '9'))
 			break;
 		s++;
 	}
