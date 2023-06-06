@@ -17,7 +17,7 @@ char *cap_string(char *str)
 		{
 		case '\n':
 		case ' ':
-		case '\b':
+		case '\t':
 		case ',':
 		case ';':
 		case '.':
@@ -33,8 +33,8 @@ char *cap_string(char *str)
 		default:
 			if (capitalize)
 			{
-				if (str[i + 1] <= 'a' && str[i + 1] >= 'z')
-					str[i + 1] -= 32;
+				if (str[i] >= 'a' && str[i] <= 'z')
+					str[i] -= 32;
 				capitalize = 0;
 			}
 			break;

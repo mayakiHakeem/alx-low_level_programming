@@ -5,6 +5,7 @@
  * @src: string to append to another string
  * @n: size of src to append
  * @dest: string to append to
+ * Return: ptr to dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
