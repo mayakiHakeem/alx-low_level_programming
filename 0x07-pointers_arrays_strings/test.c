@@ -8,17 +8,16 @@
  */
 int main(void)
 {
-	char *c = "First, solve the problem. Then, write the code.";
-	char *f = "School";
-	char *s = "solve";
-	char *t = "";
-	char *test;
-	char *test1;
-	char *test2;
-
-	test = _strstr(c, f);
-	test1 = _strstr(c, s);
-	test2 = _strstr(c, t);
-	printf("%s\n %s\n %s\n", test,test1,test2);
+	char board[8][8] = {
+		{'r', 'k', 'b', 'q', 'k', 'b', 'k', 'r'},
+		{'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
+		{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+		{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+		{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+		{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+		{'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
+		{'R', 'K', 'B', 'Q', 'K', 'B', 'K', 'R'},
+	};
+	print_chessboard(board);
 	return (0);
 }
