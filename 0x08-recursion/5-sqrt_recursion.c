@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * check_sqrt - check if sqrt
+ * check_sqrt - check if natural sqrt
  * @guess: sqrt guess
+ * @n: number to compute sqrt for
  *
  * Return: return guess
  */
@@ -27,6 +28,6 @@ int _sqrt_recursion(int n)
 	if (n < 0)
 		return (-1);
 	else if (n == 0 || n == 1)
-		return(n);
+		return (n);
 	return (check_sqrt(2, n));
 }
