@@ -5,7 +5,7 @@
  * @n: integer to compute factorial for
  *
  * Return: factorial of +tive n (success)
- * Return: -1 for -tive n
+ * -1 for -tive n
  */
 int factorial(int n)
 {
