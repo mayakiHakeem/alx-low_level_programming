@@ -11,21 +11,23 @@
  */
 int main(int argc, char *argv[])
 {
-	int sum, i;
+	int sum = 0, i;
 
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (atoi(argv[i]))
-			    sum += atoi(argv[i]);
-			else
-			    {
-				    printf("Error\n");
-				    return (1);
-			    }
+			char *ptr_check;
+			long int num = strtol(argv[i], &ptr_check, 10);
+
+			if (*ptr_check != '\0')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			sum += num;
 		}
 	}
-		printf("%d\n", sum);
-		return (0);
+	printf("%d\n", sum);
+	return (0);
 }
