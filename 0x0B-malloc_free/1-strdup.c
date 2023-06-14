@@ -23,6 +23,9 @@ char *_strdup(char *str)
 	}
 
 	new_str = malloc(sizeof(char) * (len + 1));
+	if (new_str == NULL)
+		return (NULL);
+
 	ptr_newstr = new_str;
 	while (*str != '\0')
 	{
