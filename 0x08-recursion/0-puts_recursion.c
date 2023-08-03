@@ -2,8 +2,6 @@
 
 /**
  * _puts_recursion - puts a string followed by a new line.
- * Description: put a string parameter followed by a new line
- *similar to the stdlib puts
  * @s: string param to put
  *
  * Return (0);
