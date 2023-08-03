@@ -1,0 +1,13 @@
+#include "main.h"
+
+/**
+ * is_palindrome - check if palindrome
+ *@s: string to check if palindrome
+ *
+ * Return: 1 if palindrome, otherwise 0
+ */
+int is_palindrome(char *s)
+{
+	if (*s == '\0')
+		return (1);
+	if (
