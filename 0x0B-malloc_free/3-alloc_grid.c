@@ -7,7 +7,7 @@
  * @height: height of the grid
  *
  * Return: ptr to the 2D array (SUCCESS).
- * Return: NULL if allocation failed
+ * NULL if allocation failed
  */
 int **alloc_grid(int width, int height)
 {

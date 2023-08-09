@@ -4,17 +4,17 @@
 /**
  * str_concat - concatenates two strings
  * @s1: str 1
- * @s1: str2 to tail s1
+ * @s2: str2 to tail s1
  *
  * Return: ptr to the concatenated string
- * retur NULL if allocation fails
+ * NULL if allocation fails
  */
 char *str_concat(char *s1, char *s2)
 {
 	char *concat;
 	int i, j, k, len = 0;
 
-        for (i = 0; s1[i] != '\0'; i++)
+	for (i = 0; s1[i] != '\0'; i++)
 		len++;
 	for (j = 0; s2[j] != '\0'; j++)
 		len++;
