@@ -32,12 +32,11 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0; av[i][j]; j++, k++)
 			ptr_array[k] = av[i][j];
-		if (i < ac - 1)
-		{
-			ptr_array[k] = '\n';
-			k++;
-		}
+		ptr_array[k] = '\n';
+		k++;
 	}
+	ptr_array[k] = '\0';
+	k++;
 	ptr_array[k] = '\n';
 	return (ptr_array);
 }
