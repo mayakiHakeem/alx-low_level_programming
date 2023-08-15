@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_dog - print struct
+ * print_dog - print struct variable
  * @d: struct variable
  *
  * Return: void
