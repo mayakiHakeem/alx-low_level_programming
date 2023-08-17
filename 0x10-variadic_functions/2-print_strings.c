@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_numbers - print numbers
+ * print_strings - print strings
  * @separator: printed etween strings
  * @n: number of params of the function
  *
@@ -18,7 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		asp == NULL ? printf("(nil)") : printf("%s", va_arg(asp, char *));
-		if (separator != NULL && (i < (n-1)))
+		if (separator != NULL && (i < (n - 1)))
 			printf("%s", separator);
 	}
 	printf("\n");
