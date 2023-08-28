@@ -1,12 +1,12 @@
 #include <stdio.h>
-void print_msg(void) __attribute__((constructor));
+void __attribute__((constructor)) first_msg(void);
 /**
  * print_msg - prints message before main routine executed
  *
  * Return: void
  */
-void print_msg(void)
+void first_msg(void)
 {
-	printf("You're beat! and yet, you must allow,
-\nI bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,");
+	printf("\nI bore my house upon my back!\n");
 }
