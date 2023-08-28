@@ -1,27 +1,15 @@
-	section .data
-	hello db "Hello, Holberton,",0
-	format db "%s", 0
-	newline db 10, 0
+SECTION .data
+msg:		db "Hello, Holberton", 0
+fmt:		db "%s", 10, 0
 
-	section .text
-	global main
+	SECTION .text
 	extern printf
-
+	global main
 main:
-	push rdi            ; Preserve registers
-	push rsi
-	push rax
+	mov esi, msg
+	mov edi, fmt
+	mov eax, 0
+	call printf
 
-	lea rdi, [hello]
-	lea rsi, [format]
-	call printf        	; Call printf("%s", hello)
-
-	lea rdi, [newline]
-	lea rsi, [format]
-	call printf        	; Call printf("%s", newline)
-
-	pop rax
-	pop rsi
-	pop rdi
-
+	mov eax, 0
 	ret
