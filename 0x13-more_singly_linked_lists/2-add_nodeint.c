@@ -4,7 +4,7 @@
 /**
  * add_nodeint - add a new node at the beginning
  * @head: ptr to ptr to the first element
- * n: data for the new node
+ * @n: data for the new node
  *
  * Return: address to the new node. NULL if failed
  */
