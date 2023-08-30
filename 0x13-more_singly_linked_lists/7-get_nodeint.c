@@ -25,7 +25,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 }
 
 /**
- * list_len - get length of list
+ * list_length - get length of list
  * @head: ptr to first list item
  *
  * Return: length
