@@ -12,7 +12,7 @@ int list_length(listint_t *head);
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *temp;
-	unsigned int i, len = list_len(head);
+	unsigned int i, len = list_length(head);
 
 	if (index >= len)
 		return (NULL);
