@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include "lists.h"
 
+int list_length(listint_t *head);
 /**
  * get_nodeint_at_index - get node at index
  * @head: ptr to first element of list
@@ -29,7 +30,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
  *
  * Return: length
  */
-int list_len(listint_t *head)
+int list_length(listint_t *head)
 {
 	listint_t *mover;
 	int len = 0;
