@@ -7,6 +7,8 @@
  * create_file - creates a file
  * @filename: name of file to create
  * @text_content: content to created file
+ *
+ * Return: 1 (success). 0 if failed or file is NULL
  */
 int create_file(const char *filename, char *text_content)
 {
