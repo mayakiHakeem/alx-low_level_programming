@@ -22,8 +22,12 @@ int create_file(const char *filename, char *text_content)
 
 	writer = write(fd, text_content, _strlen(text_content));
 	if (writer == -1)
+	{
+		close(fd);
 		return (-1);
+	}
 
+	close(fd);
 	return (1);
 }
 
@@ -35,7 +39,7 @@ int create_file(const char *filename, char *text_content)
  */
 int _strlen(char *str)
 {
-	int len, i;
+	int i, len = 0;
 
 	i = 0;
 	while (str[i])
