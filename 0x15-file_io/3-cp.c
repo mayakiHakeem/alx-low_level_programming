@@ -10,7 +10,7 @@
  *
  * Return: 0 (always)
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int fdr, fdw;
 	ssize_t reader, writer;
@@ -23,7 +23,7 @@ int main (int argc, char *argv[])
 	}
 
 	fdr = open(argv[1], O_RDONLY);
-        fdw = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	fdw = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	reader = read(fdr, buffer, sizeof(buffer));
 	writer = write(fdw, buffer, reader);
 	if (fdr == -1 || reader == -1)
