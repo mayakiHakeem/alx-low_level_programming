@@ -3,13 +3,6 @@
 #include <fcntl.h>
 #include <stdio.h>
 
-/**
- * main - copies content of a file to another
- * @argc: argument count
- * @argv: argument vector
- *
- * Return: 0 (always)
- */
 int main(int argc, char *argv[])
 {
 	int fdr, fdw;
@@ -23,18 +16,37 @@ int main(int argc, char *argv[])
 	}
 
 	fdr = open(argv[1], O_RDONLY);
-	fdw = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	reader = read(fdr, buffer, sizeof(buffer));
-	writer = write(fdw, buffer, reader);
-	if (fdr == -1 || reader == -1)
+	if (fdr == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(2, "Error: Can't open file %s\n", argv[1]);
 		return (98);
 	}
-	if (fdw == -1 || writer == -1)
+
+	fdw = open(argv[2], O_WRONLY | O_CREAT | O_EXCL | O_TRUNC, 0664);
+	if (fdw == -1)
 	{
-		dprintf(2, "Error: Can't write to %s\n", argv[2]);
+		dprintf(2, "Error: Can't open file %s\n", argv[2]);
+		close(fdr);
 		return (99);
+	}
+
+	while ((reader = read(fdr, buffer, sizeof(buffer))) > 0)
+	{
+		writer = write(fdw, buffer, reader);
+		if (reader == -1)
+		{
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+			close(fdr);
+			close(fdw);
+			return (98);
+		}
+		if (writer == -1)
+		{
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+			close(fdr);
+			close(fdw);
+			return (99);
+		}
 	}
 
 	if (close(fdr) == -1)
@@ -47,6 +59,5 @@ int main(int argc, char *argv[])
 		dprintf(2, "Error: Can't close fd %i\n", fdw);
 		return (100);
 	}
-
 	return (0);
 }
