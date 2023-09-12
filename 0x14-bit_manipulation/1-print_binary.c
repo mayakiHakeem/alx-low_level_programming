@@ -1,27 +1,37 @@
 #include <stdlib.h>
 #include "main.h"
 
+/**
+ * print_binary - print bin values
+ * @n: number to print
+ *
+ * Return: void
+ */
 void print_binary(unsigned long int n)
 {
-	int i;
+	int shift, leadingZero;
 
-	/*is n zero?*/
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
 
-	i = sizeof(unsigned int) * 8 - 1;
+	shift = sizeof(unsigned long int) * 8 - 1;/*bits in unsigned long int*/
+	leadingZero = 1; /* Flag to check for leading zeros*/
 
-	while ((n >> i) == 0)
+	while (shift >= 0)
 	{
-		i--;
-	}
+		if ((n >> shift) & 1)
+		{
+			leadingZero = 0; /* Set flag to no more leading zeros*/
+			_putchar('1'); /*Print '1' if the bit is 1*/
+		}
+		else if (!leadingZero)
+		{
+			_putchar('0');
+		}
 
-	while (i >= 0)
-	{
-		_putchar(((n >> i) & 1) + '0');
-		i--;
+		shift--;
 	}
 }
