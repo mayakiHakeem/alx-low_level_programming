@@ -20,6 +20,12 @@ int main(int argc __attribute__((unused)), char *argv[])
 
 	cents = atoi(argv[1]);
 
+	if (cents < 0)
+	{
+		printf("0\n");
+		return (1);
+	}
+
 	count += (cents / 25);
 	mod = cents % 25;
 
