@@ -37,7 +37,7 @@ char *argstostr(int ac, char **av)
  * _strlen - get length of string
  * @str: string
  *
- * return: pointer to str
+ * return: len
  */
 int _strlen(char *str)
 {
