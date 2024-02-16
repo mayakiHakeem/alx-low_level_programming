@@ -27,13 +27,17 @@ void print_times_table(int n)
 				}
 				else if (multiple > 9)
 				{
+					_putchar(' ');
 					_putchar((multiple / 10) + '0');
 					_putchar((multiple % 10) + '0');
 				}
 				else
 				{
-					_putchar(' ');
-					_putchar(' ');
+					if (col != 0)
+					{
+						_putchar(' ');
+						_putchar(' ');
+					}
 					_putchar(multiple + '0');
 				}
 				if (n != col)
