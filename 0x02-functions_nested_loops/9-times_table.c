@@ -1,40 +1,36 @@
-#include "main.h"
+#include <stdio.h>
 
-/**
- * times_table - write times_table to stdout
- *
- * Description: Write 0-9 times_table to stdout
- * Return: void
- */
 void times_table(void)
 {
-	int row, col;
+	int i, j, mul;
 
-	for (row = 0; row <= 9; row++)
+	for (i = 0; i <= 9; i++)
 	{
-		for (col = 0; col <= 9; col++)
+		for (j = 0; j <= 9; j++)
 		{
-			int result = row * col;
-			int result_tens = result / 10;
-			int result_unit = result % 10;
-
-			if (result < 10)
+			mul = j * i;
+			if (mul <= 9)
 			{
-				_putchar(' ');
-				_putchar(result + '0');
+				if (j != 0)
+					putchar(' ');
+				putchar(mul + '0');
+				if (j != 9)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-			else
+			if(mul > 9)
 			{
-				_putchar('0' + result_tens);
-				_putchar(result_unit + '0');
-			}
-
-			if (col != 9)
-			{
-				_putchar(',');
-				_putchar(' ');
+				putchar((mul / 10) + '0');
+				putchar((mul % 10) + '0');
+				if (j != 9)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
-		_putchar('\n');
+		putchar('\n');
 	}
 }
