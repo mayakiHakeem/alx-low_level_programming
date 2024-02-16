@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * times_table - print 9 multi table
+ *
+ * Return: void
+ */
 void times_table(void)
 {
 	int i, j, mul;
@@ -20,7 +25,7 @@ void times_table(void)
 					putchar(' ');
 				}
 			}
-			if(mul > 9)
+			if (mul > 9)
 			{
 				putchar((mul / 10) + '0');
 				putchar((mul % 10) + '0');
