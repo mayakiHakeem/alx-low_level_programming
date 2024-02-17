@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * main - print sum of even fibonacci terms not > 4000000
+ *
+ * Return: 0 always success
+ */
 int main(void)
 {
 	long int num1 = 1, num2 = 2, fib, total = 2;

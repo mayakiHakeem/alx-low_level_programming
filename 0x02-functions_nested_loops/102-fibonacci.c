@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * main - print first 50 fibonaci numbers
+ *
+ * Return: 0 success
+ */
 int main(void)
 {
 	unsigned long int prev1 = 1, prev2 = 2, fib;
