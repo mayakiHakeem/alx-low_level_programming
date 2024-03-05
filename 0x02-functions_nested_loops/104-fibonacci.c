@@ -8,18 +8,42 @@
 int main(void)
 {
 	int i;
-	unsigned long int prev = 1, now = 2, final;
+	unsigned long int prev = 0, now = 1, final;
+	unsigned long int prev_part1, prev_part2, now_part1, now_part2;
+	unsigned long int final1, final2;
 
-	printf("%ld, %ld, ", prev, now);
-	for (i = 1; i <= 98; i++)
+	for (i = 1; i <= 92; i++)
 	{
 		final = prev + now;
-		printf("%ld", final);
+		printf("%lu", final);
 		prev = now;
 		now = final;
-		if ( i != 98)
+
+		printf(", ");
+	}
+
+	prev_part1 = prev / 10000000000;
+	prev_part2 = prev % 10000000000;
+	now_part1 = now / 10000000000;
+	now_part2 = now % 10000000000;
+
+	for (i = 93; i <= 98; i++)
+	{
+		final1 = prev_part1 + now_part1;
+		final2 = prev_part2 + now_part2;
+
+		printf("%lu", final1);
+		printf("%lu", final2);
+
+		prev_part1 = now_part1;
+		prev_part2 = now_part2;
+		now_part1 = final1;
+		now_part2 = final2;
+
+		if (i != 98)
 			printf(", ");
 	}
+
 	printf("\n");
 
 	return (0);
