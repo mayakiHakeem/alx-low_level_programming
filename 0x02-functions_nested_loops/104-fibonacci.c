@@ -18,10 +18,8 @@ int main(void)
 		printf("%lu", final);
 		prev = now;
 		now = final;
-
 		printf(", ");
 	}
-
 	prev_part1 = prev / 10000000000;
 	prev_part2 = prev % 10000000000;
 	now_part1 = now / 10000000000;
@@ -31,7 +29,6 @@ int main(void)
 	{
 		final1 = prev_part1 + now_part1;
 		final2 = prev_part2 + now_part2;
-
 		if (prev_part2 + now_part2 > 9999999999)
 		{
 			final1 += 1;
@@ -46,10 +43,8 @@ int main(void)
 		prev_part2 = now_part2;
 		now_part1 = final1;
 		now_part2 = final2;
-
 	}
 
 	printf("\n");
-
 	return (0);
 }
