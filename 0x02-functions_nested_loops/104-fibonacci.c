@@ -32,16 +32,21 @@ int main(void)
 		final1 = prev_part1 + now_part1;
 		final2 = prev_part2 + now_part2;
 
-		printf("%lu", final1);
-		printf("%lu", final2);
+		if (prev_part2 + now_part2 > 9999999999)
+		{
+			final1 += 1;
+			final2 %= 10000000000;
+		}
+		printf("%lu%lu", final1, final2);
+
+		if (i != 98)
+			printf(", ");
 
 		prev_part1 = now_part1;
 		prev_part2 = now_part2;
 		now_part1 = final1;
 		now_part2 = final2;
 
-		if (i != 98)
-			printf(", ");
 	}
 
 	printf("\n");
