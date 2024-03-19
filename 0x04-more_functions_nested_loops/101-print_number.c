@@ -1,5 +1,5 @@
 #include "main.h"
-#include <limits.h>
+
 /**
  * print_number - print long numbers using putchar
  * @n: number to print
