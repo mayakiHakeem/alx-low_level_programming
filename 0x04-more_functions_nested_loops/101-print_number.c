@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <limits.h>
 /**
  * print_number - print long numbers using putchar
  * @n: number to print
@@ -9,14 +9,14 @@
 void print_number(int n)
 {
 	int count = 0, temp, i, places = 1;
+	unsigned in num;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -(n);
+		num = -(num);
 	}
-
-	temp = n;
+	temp = num;
 
 	while (temp != 0)
 	{
@@ -28,8 +28,8 @@ void print_number(int n)
 		places *= 10;
 	while (places > 0)
 	{
-		_putchar((n / places) + '0');
-		n %= places;
+		_putchar((num / places) + '0');
+		num %= places;
 		places /= 10;
 	}
 }
