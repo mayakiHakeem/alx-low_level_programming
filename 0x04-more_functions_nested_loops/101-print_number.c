@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * print_number - print long numbers using putchar
+ * @n: number to print
+ *
+ * return: void
+ */
 void print_number(int n)
 {
 	int count = 0, temp, i, places = 1;
