@@ -8,7 +8,7 @@ int isPrime(long int number);
  */
 int main(void)
 {
-	long int num;
+	long int num = 612852475143;
 	long int i, largestPrime = 2;
 
 	while (num % 2 == 0)
@@ -29,7 +29,7 @@ int main(void)
 	if (num > 2 && isPrime(num))
 		largestPrime = num;
 
-	printf("Largest Prime Factor: %ld\n", largestPrime);
+	printf("%ld\n", largestPrime);
 
 	return (0);
 }
