@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - get data at index node
+ * get_dnodeint_at_index - get data at index node
  * @head: address to head of list
  * @index: the node to get
  *
